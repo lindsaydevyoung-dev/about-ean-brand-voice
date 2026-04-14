@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EAN Company About & Brand Voice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+  /* =============================================
+     COLOR VARIABLES
+     ============================================= */
+  :root {
+    --ean-primary: #008000;
+    --ean-primary-dark: #005700;
+    --ean-dark-accent: #31333f;
+    --ean-dark-bg: #272932;
+    --ean-white-accent: #f3f3f3;
+    --ean-f9fafb: #f9fafb;
+    --ean-white: #ffffff;
+    --ean-offwhite: #F8F8F8;
+    --ean-black: #0A0A0D;
+    --ean-soft-black: #1F2128;
+    --ean-green-accent: #70e000;
+    --ean-green-muted: #1B8C1B;
+    --ean-text-primary: #31333F;
+    --ean-text-secondary: #6b7280;
+    --ean-text-muted: #7F8188;
+    --ean-text-light: #9ca3af;
+    --ean-text-dark-body: #6C6A6A;
+    --ean-blue: #1766f7;
+    --ean-border-light: rgba(255, 255, 255, 0.08);
+    --ean-border-light-strong: rgba(255, 255, 255, 0.15);
+    --ean-border-dark: #D2D2D2;
+    --ean-border-gray: #dcdcdc;
+    --ean-font: 'Figtree', sans-serif;
+  }
+
+  .ean-primary { color: var(--ean-primary) !important; }
+  .ean-dark-accent { color: var(--ean-dark-accent) !important; }
+  .ean-dark-bg { color: var(--ean-dark-bg) !important; }
+  .ean-white-accent { color: var(--ean-white-accent) !important; }
+  .ean-f9fafb { color: var(--ean-f9fafb) !important; }
+  .ean-white { color: var(--ean-white) !important; }
+
+  /* =============================================
+     TYPOGRAPHY
+     ============================================= */
+  .ean-heading-display, .ean-heading-h1, .ean-heading-h2, .ean-heading-h3, .ean-heading-h4, .ean-heading-h5, .ean-heading-h6, .ean-heading-uppercase, .ean-heading-uppercase-large,
+  .ean-body-large-strong, .ean-body-large, .ean-body-large-italic, .ean-body-strong, .ean-body, .ean-body-italic,
+  .ean-body-small-strong, .ean-body-small, .ean-body-small-italic, .ean-btn-primary, .ean-btn-primary-arrow, .ean-btn-white-outline,
+  .ean-btn-primary-outline, .ean-btn-dark-outline, .ean-btn-nav, .ean-btn-secondary, .ean-btn-secondary-arrow, a.ean-btn-read-more-arrow
+  { font-family: var(--ean-font) !important; }
+
+  .ean-heading-h1 { font-size: 69px !important; font-weight: 600 !important; letter-spacing: -0.040em !important; line-height: 1.21em !important; text-transform: none !important; font-style: normal !important; color: var(--ean-white-accent) !important; }
+  .ean-heading-h2 { font-size: 55px !important; font-weight: 600 !important; letter-spacing: -0.030em !important; line-height: 1.29em !important; text-transform: none !important; font-style: normal !important; }
+  .ean-heading-h3 { font-size: 44px !important; font-weight: 600 !important; letter-spacing: -0.019em !important; line-height: 1.35em !important; text-transform: none !important; font-style: normal !important; }
+  .ean-heading-h4 { font-size: 35px !important; font-weight: 600 !important; letter-spacing: -0.010em !important; line-height: 1.41em !important; text-transform: none !important; font-style: normal !important; }
+  .ean-heading-h5 { font-size: 28px !important; font-weight: 600 !important; letter-spacing: -0.008em !important; line-height: 1.45em !important; text-transform: none !important; font-style: normal !important; }
+  .ean-heading-h5.ean-heading-h5-400 { font-weight: 400 !important; }
+  .ean-heading-h6 { font-size: 23px !important; font-weight: 600 !important; letter-spacing: 0.005em !important; line-height: 1.48em !important; text-transform: none !important; font-style: normal !important; }
+  .ean-heading-uppercase { font-size: 12px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; line-height: 1.2em !important; text-transform: uppercase !important; color: var(--ean-primary) !important; font-style: normal !important; }
+  .ean-heading-uppercase.ean-heading-uppercase-large { font-size: 14px !important; letter-spacing: 0.08em !important; }
+
+  .ean-body-large-strong { font-size: 18px !important; font-weight: 600 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
+  .ean-body-large { font-size: 18px !important; font-weight: 400 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
+  .ean-body-large-italic { font-size: 18px !important; font-weight: 400 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: italic !important; text-wrap: balance !important; }
+  .ean-body-strong { font-size: 16px !important; font-weight: 600 !important; letter-spacing: .015em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
+  .ean-body { font-size: 16px !important; font-weight: 400 !important; letter-spacing: .015em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: pretty !important; }
+  .ean-body-italic { font-size: 16px !important; font-weight: 400 !important; letter-spacing: .015em !important; line-height: 1.7em !important; text-transform: none !important; font-style: italic !important; text-wrap: balance !important; }
+  .ean-body-small-strong { font-size: 13px !important; font-weight: 600 !important; letter-spacing: 0.023em !important; line-height: 1.6em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
+  .ean-body-small { font-size: 13px !important; font-weight: 400 !important; letter-spacing: 0.023em !important; line-height: 1.6em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
+  .ean-body-small-italic { font-size: 13px !important; font-weight: 400 !important; letter-spacing: 0.023em !important; line-height: 1.6em !important; text-transform: none !important; font-style: italic !important; text-wrap: balance !important; }
+
+  .ean-btn-primary, .ean-btn-primary-arrow, .ean-btn-white-outline, .ean-btn-primary-outline,
+  .ean-btn-dark-outline, .ean-btn-secondary, .ean-btn-secondary-arrow { font-size: 15px !important; font-weight: 600 !important; letter-spacing: 0.02em !important; font-style: normal !important; }
+  .ean-btn-dark-outline { font-weight: 500 !important; font-style: normal !important; }
+  .ean-btn-nav { font-size: 13px !important; font-weight: 600 !important; letter-spacing: 0.01em !important; font-style: normal !important; }
+  a.ean-btn-read-more-arrow { font-size: 13px !important; font-weight: 400 !important; letter-spacing: 0.01em !important; font-style: normal !important; }
+
+  @media (max-width: 1024px) {
+    .ean-heading-h1 { font-size: 54px !important; letter-spacing: -0.039em !important; line-height: 1.30em !important; }
+    .ean-heading-h2 { font-size: 45px !important; letter-spacing: -0.028em !important; line-height: 1.35em !important; }
+    .ean-heading-h3 { font-size: 37px !important; letter-spacing: -0.020em !important; line-height: 1.40em !important; }
+    .ean-heading-h4 { font-size: 31px !important; letter-spacing: -0.010em !important; line-height: 1.43em !important; }
+    .ean-heading-h5 { font-size: 26px !important; letter-spacing: -0.010em !important; line-height: 1.46em !important; }
+    .ean-heading-h6 { font-size: 22px !important; letter-spacing: -0.004em !important; line-height: 1.49em !important; }
+  }
+
+  @media (max-width: 767px) {
+    .ean-heading-h1 { font-size: 42px !important; letter-spacing: -0.025em !important; line-height: 1.37em !important; }
+    .ean-heading-h2 { font-size: 36px !important; letter-spacing: -0.016em !important; line-height: 1.40em !important; }
+    .ean-heading-h3 { font-size: 31px !important; letter-spacing: -0.010em !important; line-height: 1.43em !important; margin-bottom: 16px !important; }
+    .ean-heading-h4 { font-size: 27px !important; letter-spacing: -0.010em !important; line-height: 1.46em !important; }
+    .ean-heading-h5 { font-size: 24px !important; letter-spacing: -0.007em !important; line-height: 1.48em !important; }
+    .ean-heading-h6 { font-size: 21px !important; letter-spacing: -0.001em !important; line-height: 1.50em !important; }
+  }
+
+  /* =============================================
+     LAYOUT
+     ============================================= */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--ean-font);
+    background: var(--ean-offwhite);
+    color: var(--ean-text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* HERO */
+  .hero {
+    background: #272932;
+    color: var(--ean-white-accent);
+    padding: 140px 0 120px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--ean-border-light);
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(112, 224, 0, 0.08), transparent 55%),
+      radial-gradient(ellipse at 85% 90%, rgba(0, 128, 0, 0.12), transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero .container { position: relative; z-index: 1; }
+
+  .hero .eyebrow {
+    display: inline-block;
+    padding: 8px 14px;
+    background: rgba(112, 224, 0, 0.08);
+    border: 1px solid var(--ean-border-light-strong);
+    border-radius: 999px;
+    margin-bottom: 28px;
+  }
+
+  .hero h1 { max-width: 18ch; margin-bottom: 28px; }
+
+  .hero .lede {
+    max-width: 58ch;
+    color: rgba(243, 243, 243, 0.78);
+  }
+
+  .hero .tagline {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--ean-border-light);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--ean-green-accent);
+  }
+
+  .tagline-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ean-green-accent);
+    box-shadow: 0 0 0 4px rgba(112, 224, 0, 0.18);
+  }
+
+  /* SECTIONS */
+  section { padding: 112px 0; }
+
+  section.alt { background: var(--ean-white); }
+  section.dark {
+    background: var(--ean-dark-bg);
+    color: var(--ean-white-accent);
+  }
+
+  .section-header {
+    max-width: 720px;
+    margin-bottom: 56px;
+  }
+
+  .section-header .ean-heading-uppercase {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  .section-header h2 {
+    color: var(--ean-text-primary);
+    margin-bottom: 20px;
+  }
+
+  section.dark .section-header h2 { color: var(--ean-white-accent); }
+  section.dark .section-header p { color: rgba(243, 243, 243, 0.72); }
+
+  /* MISSION & VISION */
+  .mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .mv-card {
+    background: var(--ean-white);
+    border: 1px solid var(--ean-border-gray);
+    border-radius: 20px;
+    padding: 48px 44px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .mv-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px -24px rgba(49, 51, 63, 0.16);
+    border-color: var(--ean-primary);
+  }
+
+  .mv-card .label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .mv-card .pin {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--ean-primary);
+    color: var(--ean-white);
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .mv-card h3 {
+    color: var(--ean-text-primary);
+    margin-bottom: 16px;
+  }
+
+  .mv-card p { color: var(--ean-text-dark-body); }
+
+  /* VALUES */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .value-card {
+    background: var(--ean-white);
+    border: 1px solid var(--ean-border-gray);
+    border-radius: 18px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .value-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--ean-primary);
+  }
+
+  .value-card .num {
+    color: var(--ean-primary);
+    margin-bottom: 12px;
+  }
+
+  .value-card h4 {
+    color: var(--ean-text-primary);
+    margin-bottom: 14px;
+  }
+
+  .value-card p { color: var(--ean-text-dark-body); }
+
+  /* AUDIENCE INTENT */
+  .intent-wrap {
+    background: linear-gradient(135deg, var(--ean-dark-accent) 0%, var(--ean-dark-bg) 100%);
+    border-radius: 24px;
+    padding: 72px 64px;
+    color: var(--ean-white-accent);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intent-wrap::after {
+    content: "";
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 128, 0, 0.22), transparent 70%);
+  }
+
+  .intent-wrap .intent-body {
+    position: relative;
+    max-width: 64ch;
+  }
+
+  .intent-wrap h3 { color: var(--ean-white-accent); margin-bottom: 24px; }
+  .intent-wrap p { color: rgba(243, 243, 243, 0.82); }
+
+  /* TWO COLUMN LISTS */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+  }
+
+  .col-card h3 {
+    color: var(--ean-text-primary);
+    margin-bottom: 24px;
+  }
+
+  section.dark .col-card h3 { color: var(--ean-white-accent); }
+
+  .check-list, .x-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .check-list li, .x-list li {
+    padding-left: 36px;
+    position: relative;
+    color: var(--ean-text-dark-body);
+  }
+
+  section.dark .check-list li, section.dark .x-list li { color: rgba(243, 243, 243, 0.78); }
+
+  .check-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--ean-primary);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .x-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(239, 68, 68, 0.14);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ef4444' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg>");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* GOALS */
+  .goals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .goal-tile {
+    background: var(--ean-white);
+    border: 1px solid var(--ean-border-gray);
+    border-radius: 14px;
+    padding: 28px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .goal-tile:hover {
+    border-color: var(--ean-primary);
+    transform: translateY(-2px);
+  }
+
+  .goal-tile .num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: rgba(0, 128, 0, 0.08);
+    color: var(--ean-primary);
+    display: grid;
+    place-items: center;
+  }
+
+  .goal-tile p { color: var(--ean-text-primary); }
+
+  /* CONTENT PREFS */
+  .prefs-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .prefs-block {
+    background: var(--ean-white);
+    border: 1px solid var(--ean-border-gray);
+    border-left: 4px solid var(--ean-primary);
+    border-radius: 16px;
+    padding: 40px;
+  }
+
+  .prefs-block h4 {
+    color: var(--ean-text-primary);
+    margin-bottom: 20px;
+  }
+
+  .prefs-block ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 32px;
+  }
+
+  .prefs-block ul li {
+    padding-left: 24px;
+    position: relative;
+    color: var(--ean-text-dark-body);
+  }
+
+  .prefs-block ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 8px;
+    height: 8px;
+    background: var(--ean-primary);
+    border-radius: 2px;
+    transform: rotate(45deg);
+  }
+
+  /* CONSISTENCY PILLARS */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .pillar {
+    padding: 24px 28px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--ean-border-light-strong);
+    border-radius: 14px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .pillar .bar {
+    width: 3px;
+    align-self: stretch;
+    background: var(--ean-green-accent);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .pillar p { color: rgba(243, 243, 243, 0.85); }
+
+  /* STORYTELLING STEPS */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    counter-reset: step;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 32px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--ean-border-gray);
+    align-items: start;
+  }
+
+  .step:last-child { border-bottom: none; }
+
+  .step .badge {
+    counter-increment: step;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: var(--ean-primary);
+    color: var(--ean-white);
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  .step .badge::before { content: counter(step, decimal-leading-zero); }
+
+  .step p { color: var(--ean-text-dark-body); }
+
+  /* CLOSING BANNER */
+  .closing {
+    background: var(--ean-primary);
+    color: var(--ean-white);
+    padding: 96px 0;
+    text-align: center;
+  }
+
+  .closing h2 {
+    color: var(--ean-white);
+    max-width: 22ch;
+    margin: 0 auto 20px;
+  }
+
+  .closing p {
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 52ch;
+    margin: 0 auto;
+  }
+
+  footer {
+    background: var(--ean-black);
+    color: var(--ean-text-light);
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .mv-grid, .values-grid, .two-col, .pillars { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .goals-grid { grid-template-columns: repeat(2, 1fr); }
+    .intent-wrap { padding: 56px 44px; }
+    .two-col { gap: 48px; }
+  }
+
+  @media (max-width: 767px) {
+    section { padding: 72px 0; }
+    .container { padding: 0 22px; }
+    .hero { padding: 96px 0 80px; }
+    .mv-grid, .values-grid, .two-col, .pillars, .goals-grid { grid-template-columns: 1fr; }
+    .mv-card, .value-card, .prefs-block { padding: 32px 26px; }
+    .intent-wrap { padding: 44px 28px; }
+    .prefs-block ul { grid-template-columns: 1fr; }
+    .step { grid-template-columns: 1fr; gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <h1 class="ean-heading-h1">About EAN &amp; Brand Voice</h1>
+  </div>
+</header>
+
+<!-- MISSION -->
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="ean-heading-h2">Mission Statement</h2>
+    </div>
+
+    <article class="mv-card">
+      <p class="ean-body-large">To link Donors, Foundations, Non-Profits, and Recipients in one verified philanthropic network, ensuring that every dollar moves with urgency and full visibility from Donor to Recipient, closing the gap between intent and impact.</p>
+    </article>
+  </div>
+</section>
+
+<!-- VISION -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2 class="ean-heading-h2">Vision Statement</h2>
+    </div>
+
+    <article class="mv-card">
+      <p class="ean-body-large">A future where philanthropy runs on trust, speed, and transparency, where every organization, contribution, and Recipient is linked in one connected chain, and no disaster survivor waits weeks for help that should have arrived in hours.</p>
+    </article>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="ean-heading-h2">Values: The Four Pillars</h2>
+    </div>
+
+    <div class="values-grid">
+      <article class="value-card">
+        <div class="num ean-heading-uppercase">Value 01</div>
+        <h4 class="ean-heading-h5">Speed</h4>
+        <p class="ean-body">When disaster strikes, every hour matters. Because EAN is already built and Non-Profits are already in the network, there's no setup, no delays. ACH bank transfers and physical cards move money to Recipients the moment it's needed.</p>
+      </article>
+
+      <article class="value-card">
+        <div class="num ean-heading-uppercase">Value 02</div>
+        <h4 class="ean-heading-h5">Transparency</h4>
+        <p class="ean-body">Every dollar tracked like a package with a tracking number, every step timestamped. Donors see exactly where contributions go. Foundations get audit trails that boards require. Real-time proof that every dollar reached its destination.</p>
+      </article>
+
+      <article class="value-card">
+        <div class="num ean-heading-uppercase">Value 03</div>
+        <h4 class="ean-heading-h5">Credibility</h4>
+        <p class="ean-body">EAN membership signals that your organization meets the standard for verified emergency response. Automatic reporting, secure audit trails, and full compliance documentation are built into every transaction, giving your board, your funders, and your regulators everything they need.</p>
+      </article>
+
+      <article class="value-card">
+        <div class="num ean-heading-uppercase">Value 04</div>
+        <h4 class="ean-heading-h5">Integrity</h4>
+        <p class="ean-body">Every chain is only as strong as its final link. In EAN, the final link closes with a thank you, verified proof that real relief reached a real person. Recipients voluntarily rate the Non-Profits and Foundations that served them, and that feedback flows back through the entire chain to the Donors whose generosity made it possible.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE INTENT -->
+<section>
+  <div class="container">
+    <div class="intent-wrap">
+      <div class="intent-body">
+        <h3 class="ean-heading-h3">Who EAN speaks to, and what we want them to do.</h3>
+        <p class="ean-body-large">EAN speaks to Foundations, Non-Profits, and Donors who are serious about disaster relief and frustrated by the delays, blind spots, and disconnected systems that slow giving down. They are ready to invest in infrastructure that lets them respond the moment disaster strikes, with full visibility into where every dollar goes and proof that it reached the people who needed it.</p>
+        <br/>
+        <p class="ean-body-large">The goal is for that audience to understand that EAN is the verified network built to close the gap between intent and impact, feel confident that joining means faster response, full traceability, and real accountability, and take the next step toward becoming part of the network before the next disaster hits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL GOALS -->
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="ean-heading-h2">Social Media Goals</h2>
+      <p class="ean-body-large">Twelve goals that shape what EAN publishes, who it reaches, and the trust it builds before disaster strikes.</p>
+    </div>
+
+    <div class="goals-grid">
+      <div class="goal-tile"><span class="num ean-body-small-strong">01</span><p class="ean-body">Educate Foundations and Non-Profits on what a verified philanthropic network makes possible.</p></div>
+      <div class="goal-tile"><span class="num ean-body-small-strong">02</span><p class="ean-body">Build trust with potential network partners before disaster strikes.</p></div>
+      <div class="goal-tile"><span class="num ean-body-small-strong">03</span><p class="ean-body">Position EAN as the standard for transparent, traceable disaster relief.</p></div>
+      <div class="goal-tile"><span class="num ean-body-small-strong">04</span><p class="ean-body">Attract Foundations and Non-Profits ready to invest in proactive infrastructure.</p></div>
+      <div class="goal-tile"><span class="num ean-body-small-strong">05</span><p class="ean-body">Show real Recipient outcomes that prove the network works.</p></div>
+      <div class="goal-tile"><span class="num ean-body-small-strong">06</span><p class="ean-body">Demystify how funds move from Donor to Recipient in 24 hours.</p></div>
+      <div class="goal-tile"><span class="num ean-body-small-strong">07</span><p class="ean-body">Establish credibility through verified testimonials and traceable results.</p></div>
+      <div class="goal-tile"><span class="num ean-body-small-strong">08</span><p class="ean-body">Reach decision-makers at organizations responsible for disaster response.</p></div>
+      <div class="goal-tile"><span class="num ean-body-small-strong">09</span><p class="ean-body">Demonstrate the cost of delayed relief and the value of being ready.</p></div>
+      <div class="goal-tile"><span class="num ean-body-small-strong">10</span><p class="ean-body">Build a network of partners who recommend EAN to their peers.</p></div>
+      <div class="goal-tile"><span class="num ean-body-small-strong">11</span><p class="ean-body">Keep EAN top of mind for organizations evaluating their disaster response readiness.</p></div>
+      <div class="goal-tile"><span class="num ean-body-small-strong">12</span><p class="ean-body">Grow awareness among Donors who want proof their contributions reach real people.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT BOUNDARIES -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2 class="ean-heading-h2">Social Media Content Boundaries</h2>
+      <p class="ean-body-large">Clear lines the work does not cross. These protect Recipients, partners, and the integrity of the network.</p>
+    </div>
+
+    <div class="col-card">
+      <h3 class="ean-heading-h5">Never do this</h3>
+      <ul class="x-list">
+        <li class="ean-body">Never use disaster footage or imagery that exploits survivors.</li>
+        <li class="ean-body">Never share Recipient stories or names without verified consent.</li>
+        <li class="ean-body">Avoid politicizing disasters or aligning with partisan messaging.</li>
+        <li class="ean-body">Never speculate on active disaster events for engagement.</li>
+        <li class="ean-body">Avoid corporate jargon, buzzwords, and overly polished language.</li>
+        <li class="ean-body">Never make promises the network cannot back with proof.</li>
+        <li class="ean-body">Avoid trend-chasing content that conflicts with the seriousness of the work.</li>
+        <li class="ean-body">Never reduce Recipients to statistics or stock-photo stand-ins.</li>
+        <li class="ean-body">Avoid fear-based messaging or urgency tactics designed to manipulate.</li>
+        <li class="ean-body">Never disclose partner organization details without explicit approval.</li>
+        <li class="ean-body">Avoid comparing EAN to specific competitors by name.</li>
+        <li class="ean-body">Never publish Donor or contribution amounts without permission.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT PREFERENCES -->
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="ean-heading-h2">Social Media Content Preferences</h2>
+      <p class="ean-body-large">The formats, themes, and creative constraints that define every piece of EAN content.</p>
+    </div>
+
+    <div class="prefs-stack">
+      <div class="prefs-block">
+        <h4 class="ean-heading-h5">Preferred Formats</h4>
+        <ul>
+          <li class="ean-body">Verified Recipient testimonials in their own words.</li>
+          <li class="ean-body">Process explainers that walk through how funds move through the network.</li>
+          <li class="ean-body">Data visualizations showing speed, traceability, and impact.</li>
+          <li class="ean-body">Short-form video featuring real network activations.</li>
+          <li class="ean-body">Partner spotlights highlighting Foundations and Non-Profits in the network.</li>
+          <li class="ean-body">Educational carousels breaking down complex giving concepts.</li>
+          <li class="ean-body">Behind-the-scenes content showing how the network is built and maintained.</li>
+          <li class="ean-body">Quote graphics pulling directly from Recipient feedback.</li>
+        </ul>
+      </div>
+
+      <div class="prefs-block">
+        <h4 class="ean-heading-h5">Recurring Themes</h4>
+        <ul>
+          <li class="ean-body">The cost of slow disaster relief.</li>
+          <li class="ean-body">What full transparency in philanthropy actually looks like.</li>
+          <li class="ean-body">How verification protects every party in the giving chain.</li>
+          <li class="ean-body">The difference between intent and impact.</li>
+          <li class="ean-body">Why proactive infrastructure matters before disaster strikes.</li>
+          <li class="ean-body">Real Recipient voices and verified outcomes.</li>
+          <li class="ean-body">The role of trust in modern philanthropy.</li>
+          <li class="ean-body">How disconnected systems fail the people they are meant to serve.</li>
+        </ul>
+      </div>
+
+      <div class="prefs-block">
+        <h4 class="ean-heading-h5">Creative Constraints</h4>
+        <ul>
+          <li class="ean-body">Stay within the EAN color palette and typography system.</li>
+          <li class="ean-body">Never use stock imagery to represent Recipients.</li>
+          <li class="ean-body">Keep visuals clean, structured, and professional.</li>
+          <li class="ean-body">Use plain language at every reading level.</li>
+          <li class="ean-body">Avoid trend-driven formats that undermine the seriousness of the work.</li>
+          <li class="ean-body">Maintain consistent role capitalization (Donor, Foundation, Non-Profit, Recipient).</li>
+          <li class="ean-body">Never use em dashes in copy.</li>
+          <li class="ean-body">Always reinforce the "Trusted Philanthropy. Fully Linked." brand language.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSISTENCY FACTORS (dark) -->
+<section class="dark">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="ean-heading-h2">Consistency Factors</h2>
+      <p class="ean-body-large">The beliefs that stay constant across every post, every campaign, and every conversation.</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar"><span class="bar"></span><p class="ean-body">Transparency is non-negotiable.</p></div>
+      <div class="pillar"><span class="bar"></span><p class="ean-body">Trust is earned through proof, not promises.</p></div>
+      <div class="pillar"><span class="bar"></span><p class="ean-body">Recipients always have a voice.</p></div>
+      <div class="pillar"><span class="bar"></span><p class="ean-body">Disbursement happens within 24 hours.</p></div>
+      <div class="pillar"><span class="bar"></span><p class="ean-body">Every link in the chain carries equal weight.</p></div>
+      <div class="pillar"><span class="bar"></span><p class="ean-body">Every dollar is tracked, timestamped, and traceable.</p></div>
+      <div class="pillar"><span class="bar"></span><p class="ean-body">Plain language, always. No jargon, no polish, no filler.</p></div>
+      <div class="pillar"><span class="bar"></span><p class="ean-body">The work is serious because the stakes are real.</p></div>
+      <div class="pillar"><span class="bar"></span><p class="ean-body">Relationships come before transactions.</p></div>
+      <div class="pillar"><span class="bar"></span><p class="ean-body">Integrity guides every decision, even the ones no one sees.</p></div>
+      <div class="pillar"><span class="bar"></span><p class="ean-body">Proactive by design, reactive by deployment.</p></div>
+      <div class="pillar"><span class="bar"></span><p class="ean-body">Every participant in the network is treated with equal respect.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORYTELLING -->
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="ean-heading-h2">Storytelling Approach</h2>
+      <p class="ean-body-large">Twelve principles that shape every narrative, from a single quote graphic to a full campaign.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step"><div class="badge"></div><p class="ean-body">Lead with the human outcome, then show the system that made it possible.</p></div>
+      <div class="step"><div class="badge"></div><p class="ean-body">Let Recipients speak for themselves through verified testimonials.</p></div>
+      <div class="step"><div class="badge"></div><p class="ean-body">Walk through real activations from disaster trigger to fund disbursement.</p></div>
+      <div class="step"><div class="badge"></div><p class="ean-body">Use timestamps and traceable data to show speed and accountability.</p></div>
+      <div class="step"><div class="badge"></div><p class="ean-body">Show the gap between intent and impact, then show how EAN closes it.</p></div>
+      <div class="step"><div class="badge"></div><p class="ean-body">Highlight Foundation and Non-Profit partners as the heroes of the network.</p></div>
+      <div class="step"><div class="badge"></div><p class="ean-body">Break complex philanthropic processes into clear, sequential steps.</p></div>
+      <div class="step"><div class="badge"></div><p class="ean-body">Contrast the old way of disaster giving with what the network makes possible.</p></div>
+      <div class="step"><div class="badge"></div><p class="ean-body">Use real numbers and verified outcomes instead of generalizations.</p></div>
+      <div class="step"><div class="badge"></div><p class="ean-body">Frame every story around one of the four roles in the chain.</p></div>
+      <div class="step"><div class="badge"></div><p class="ean-body">Show preparation as the quiet work that makes fast response possible.</p></div>
+      <div class="step"><div class="badge"></div><p class="ean-body">Connect every story back to the people on the receiving end.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="container">
+    <h2 class="ean-heading-h2">Trusted Philanthropy. Fully Linked.</h2>
+    <p class="ean-body-large">One verified network. Four connected roles. Every dollar traceable from Donor to Recipient.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="ean-body-small">EAN Brand Voice Document</p>
+  </div>
+</footer>
+
+</body>
+</html>
