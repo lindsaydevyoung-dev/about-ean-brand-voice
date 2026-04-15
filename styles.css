@@ -192,6 +192,7 @@
   @media (min-width: 768px) {
     .section-header:has(.nowrap-desktop) { max-width: none; }
     .nowrap-desktop { white-space: nowrap; }
+    .break-desktop { display: block; }
   }
 
   .section-header .ean-heading-uppercase {
@@ -306,7 +307,7 @@
 
   /* AUDIENCE INTENT */
   .intent-wrap {
-    background: linear-gradient(135deg, var(--ean-dark-accent) 0%, var(--ean-dark-bg) 100%);
+    background: var(--ean-dark-bg);
     border-radius: 40px;
     padding: 72px 64px;
     color: var(--ean-white-accent);
@@ -314,18 +315,9 @@
     overflow: hidden;
   }
 
-  .intent-wrap::after {
-    content: "";
-    position: absolute;
-    right: -100px;
-    top: -100px;
-    width: 720px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(0, 128, 0, 0.22), transparent 70%);
-  }
-
   .intent-wrap .intent-body {
     position: relative;
+    max-width: 720px;
   }
 
   .intent-wrap h4 { color: var(--ean-white-accent); padding-bottom: 24px; }
