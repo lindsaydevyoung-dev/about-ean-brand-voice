@@ -17,6 +17,7 @@
     --ean-text-primary: #31333F;
     --ean-text-secondary: #6b7280;
     --ean-text-muted: #7F8188;
+    --ean-text-muted-light: #8F9198;
     --ean-text-light: #9ca3af;
     --ean-text-dark-body: #6C6A6A;
     --ean-blue: #1766f7;
@@ -43,16 +44,18 @@
   .ean-btn-primary-outline, .ean-btn-dark-outline, .ean-btn-nav, .ean-btn-secondary, .ean-btn-secondary-arrow, a.ean-btn-read-more-arrow
   { font-family: var(--ean-font) !important; }
 
-  .ean-heading-h1 { font-size: 69px !important; font-weight: 600 !important; letter-spacing: -0.040em !important; line-height: 1.21em !important; text-transform: none !important; font-style: normal !important; color: var(--ean-white-accent) !important; }
-  .ean-heading-h2 { font-size: 55px !important; font-weight: 600 !important; letter-spacing: -0.030em !important; line-height: 1.29em !important; text-transform: none !important; font-style: normal !important; }
-  .ean-heading-h3 { font-size: 44px !important; font-weight: 600 !important; letter-spacing: -0.019em !important; line-height: 1.35em !important; text-transform: none !important; font-style: normal !important; }
-  .ean-heading-h4 { font-size: 35px !important; font-weight: 600 !important; letter-spacing: -0.010em !important; line-height: 1.41em !important; text-transform: none !important; font-style: normal !important; }
-  .ean-heading-h5 { font-size: 28px !important; font-weight: 600 !important; letter-spacing: -0.008em !important; line-height: 1.45em !important; text-transform: none !important; font-style: normal !important; }
+  .ean-heading-h1 { font-size: 72px !important; font-weight: 600 !important; letter-spacing: -0.040em !important; line-height: 1.21em !important; text-transform: none !important; font-style: normal !important; color: var(--ean-white-accent) !important; }
+  .ean-heading-h2 { font-size: 58px !important; font-weight: 600 !important; letter-spacing: -0.030em !important; line-height: 1.29em !important; text-transform: none !important; font-style: normal !important; }
+  .ean-heading-h3 { font-size: 46px !important; font-weight: 600 !important; letter-spacing: -0.019em !important; line-height: 1.35em !important; text-transform: none !important; font-style: normal !important; }
+  .ean-heading-h4 { font-size: 37px !important; font-weight: 600 !important; letter-spacing: -0.010em !important; line-height: 1.41em !important; text-transform: none !important; font-style: normal !important; }
+  .ean-heading-h5 { font-size: 30px !important; font-weight: 600 !important; letter-spacing: -0.008em !important; line-height: 1.45em !important; text-transform: none !important; font-style: normal !important; }
   .ean-heading-h5.ean-heading-h5-400 { font-weight: 400 !important; }
-  .ean-heading-h6 { font-size: 23px !important; font-weight: 600 !important; letter-spacing: 0.005em !important; line-height: 1.48em !important; text-transform: none !important; font-style: normal !important; }
+  .ean-heading-h6 { font-size: 24px !important; font-weight: 600 !important; letter-spacing: 0.005em !important; line-height: 1.48em !important; text-transform: none !important; font-style: normal !important; }
   .ean-heading-uppercase { font-size: 12px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; line-height: 1.2em !important; text-transform: uppercase !important; color: var(--ean-primary) !important; font-style: normal !important; }
   .ean-heading-uppercase.ean-heading-uppercase-large { font-size: 14px !important; letter-spacing: 0.08em !important; }
 
+  .ean-body-xlarge-strong { font-size: 20px !important; font-weight: 600 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; color: var(--ean-dark-accent) !important;}
+  .ean-body-xlarge { font-size: 20px !important; font-weight: 400 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
   .ean-body-large-strong { font-size: 18px !important; font-weight: 600 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
   .ean-body-large { font-size: 18px !important; font-weight: 400 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
   .ean-body-large-italic { font-size: 18px !important; font-weight: 400 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: italic !important; text-wrap: balance !important; }
@@ -76,6 +79,13 @@
     .ean-heading-h4 { font-size: 31px !important; letter-spacing: -0.010em !important; line-height: 1.43em !important; }
     .ean-heading-h5 { font-size: 26px !important; letter-spacing: -0.010em !important; line-height: 1.46em !important; }
     .ean-heading-h6 { font-size: 22px !important; letter-spacing: -0.004em !important; line-height: 1.49em !important; }
+    
+    .ean-body-xlarge-strong { font-size: 19px !important; }
+    .ean-body-xlarge { font-size: 19px !important; }
+    .ean-body-large-strong { font-size: 17px !important; }
+    .ean-body-large { font-size: 17px !important; }
+    .ean-body-strong { font-size: 15px !important; }
+    .ean-body { font-size: 15px !important; }
   }
 
   @media (max-width: 767px) {
@@ -85,6 +95,13 @@
     .ean-heading-h4 { font-size: 27px !important; letter-spacing: -0.010em !important; line-height: 1.46em !important; }
     .ean-heading-h5 { font-size: 24px !important; letter-spacing: -0.007em !important; line-height: 1.48em !important; }
     .ean-heading-h6 { font-size: 21px !important; letter-spacing: -0.001em !important; line-height: 1.50em !important; }
+    
+    .ean-body-xlarge-strong { font-size: 19px !important; }
+    .ean-body-xlarge { font-size: 19px !important; }
+    .ean-body-large-strong { font-size: 17px !important; }
+    .ean-body-large { font-size: 17px !important; }
+    .ean-body-strong { font-size: 15px !important; }
+    .ean-body { font-size: 15px !important; }
   }
 
   /* =============================================
@@ -112,14 +129,16 @@
   .hero {
     background: var(--ean-dark-bg);
     color: var(--ean-white-accent);
-    padding: 140px 0 120px;
-    min-height: 60vh;
+    padding: 130px 0 140px;
+    min-height: 52vh;
+    display: flex;
+    align-items: center;
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid var(--ean-border-light);
   }
 
-  .hero .container { position: relative; z-index: 1; }
+  .hero .container { position: relative; z-index: 1; width: 100%; }
 
   .hero .eyebrow {
     display: inline-block;
@@ -127,10 +146,10 @@
     background: rgba(112, 224, 0, 0.08);
     border: 1px solid var(--ean-border-light-strong);
     border-radius: 999px;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
   }
 
-  .hero h1 { max-width: 18ch; margin-bottom: 28px; }
+  .hero h1 { max-width: 18ch; margin-bottom: 32px; }
 
   .hero h1 .accent {
     color: var(--ean-primary);
@@ -138,7 +157,7 @@
 
   .hero .lede {
     max-width: 720px;
-    color: rgba(243, 243, 243, 0.78);
+    color: var(--ean-text-muted);
   }
 
   @media (min-width: 768px) {
@@ -154,14 +173,6 @@
     align-items: center;
     gap: 14px;
     color: var(--ean-green-accent);
-  }
-
-  .tagline-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--ean-green-accent);
-    box-shadow: 0 0 0 4px rgba(112, 224, 0, 0.18);
   }
 
   /* SECTIONS */
@@ -209,7 +220,7 @@
   .vision-float {
     background: var(--ean-dark-bg);
     border-radius: 40px;
-    padding: 72px 64px;
+    padding: 80px;
     color: var(--ean-white-accent);
   }
 
@@ -229,73 +240,12 @@
   .vision-float .mv-card::before { display: none; }
   .vision-float .mv-card p { color: rgba(243, 243, 243, 0.82); text-wrap: pretty !important; }
 
-  @media (max-width: 767px) {
-    .vision-float { padding: 48px 28px; border-radius: 16px; }
+  @media (max-width: 1024px) {
+    .vision-float { padding: 48px 28px; border-radius: 20px; }
   }
-
-  /* MISSION & VISION */
-  .mv-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    @media (max-width: 767px) {
+    .vision-float { padding: 32px 24px; border-radius: 16px; }
   }
-
-  .mv-card {
-    background: var(--ean-white);
-    border: 1px solid var(--ean-border-gray);
-    border-radius: 20px;
-    padding: 48px 44px;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-
-  .mv-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 20px 40px -24px rgba(49, 51, 63, 0.16), 0 0 0 1px rgba(112, 224, 0, 0.25);
-    border-color: var(--ean-primary);
-  }
-
-  .mv-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 80px;
-    height: 80px;
-    background: radial-gradient(circle at top right, rgba(112, 224, 0, 0.18), transparent 70%);
-    border-top-right-radius: 20px;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .mv-card:hover::before { opacity: 1; }
-
-  .mv-card .label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 24px;
-  }
-
-  .mv-card .pin {
-    width: 28px;
-    height: 28px;
-    border-radius: 8px;
-    background: var(--ean-primary);
-    color: var(--ean-white);
-    display: grid;
-    place-items: center;
-    font-size: 13px;
-    font-weight: 700;
-  }
-
-  .mv-card h3 {
-    color: var(--ean-text-primary);
-    margin-bottom: 16px;
-  }
-
-  .mv-card p { color: var(--ean-text-dark-body); }
 
   /* VALUES */
   .values-grid {
@@ -306,7 +256,7 @@
 
   .value-card {
     background: var(--ean-white);
-    border: 1px solid var(--ean-border-gray);
+    border: 1px solid var(--ean-primary);
     border-radius: 18px;
     padding: 40px;
     position: relative;
@@ -324,13 +274,13 @@
     left: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(180deg, var(--ean-green-accent) 0%, var(--ean-primary) 100%);
+    background: var(--ean-primary);
   }
 
   .value-card:hover {
     transform: translateY(-3px);
-    border-color: var(--ean-primary);
-    box-shadow: 0 24px 48px -28px rgba(0, 128, 0, 0.28);
+    border-color: var(--ean-text-secondary);
+    box-shadow: 0 24px 48px -28px rgba(107, 114, 128, 0.28);
   }
 
   .value-card .num {
@@ -338,9 +288,13 @@
     margin-bottom: 12px;
   }
 
-  .value-card h4 {
+  .value-card h5 {
     color: var(--ean-text-primary);
     margin-bottom: 14px;
+  }
+
+  .value-card .ean-body-xlarge-strong {
+    padding-bottom: 16px;
   }
 
   .value-card p { color: var(--ean-text-dark-body); }
