@@ -206,6 +206,34 @@
   section.dark .section-header h2 { color: var(--ean-white-accent); }
   section.dark .section-header p { color: rgba(243, 243, 243, 0.72); }
 
+  /* VISION FLOAT */
+  .vision-float {
+    background: var(--ean-dark-bg);
+    border-radius: 40px;
+    padding: 72px 64px;
+    color: var(--ean-white-accent);
+    box-shadow: 0 30px 60px -30px rgba(39, 41, 50, 0.35);
+  }
+
+  .vision-float .section-header { margin-bottom: 32px; }
+  .vision-float .section-header h2 { color: var(--ean-white-accent); }
+  .vision-float .mv-card {
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  .vision-float .mv-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: transparent;
+  }
+  .vision-float .mv-card::before { display: none; }
+  .vision-float .mv-card p { color: rgba(243, 243, 243, 0.82); }
+
+  @media (max-width: 767px) {
+    .vision-float { padding: 48px 28px; border-radius: 28px; }
+  }
+
   /* MISSION & VISION */
   .mv-grid {
     display: grid;
@@ -664,13 +692,15 @@
 <!-- VISION -->
 <section>
   <div class="container">
-    <div class="section-header">
-      <h2 class="ean-heading-h2">Vision Statement</h2>
-    </div>
+    <div class="vision-float">
+      <div class="section-header">
+        <h2 class="ean-heading-h2">Vision Statement</h2>
+      </div>
 
-    <article class="mv-card">
-      <p class="ean-body-large">A future where philanthropy runs on trust, speed, and transparency, where every organization, contribution, and Recipient is linked in one connected chain, and no disaster survivor waits weeks for help that should have arrived in hours.</p>
-    </article>
+      <article class="mv-card">
+        <p class="ean-body-large">A future where philanthropy runs on trust, speed, and transparency, where every organization, contribution, and Recipient is linked in one connected chain, and no disaster survivor waits weeks for help that should have arrived in hours.</p>
+      </article>
+    </div>
   </div>
 </section>
 
