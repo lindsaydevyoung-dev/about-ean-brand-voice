@@ -151,6 +151,13 @@
 
   .hero h1 { max-width: 18ch; margin-bottom: 28px; }
 
+  .hero h1 .accent {
+    background: linear-gradient(120deg, var(--ean-green-accent) 0%, var(--ean-primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
   .hero .lede {
     max-width: 58ch;
     color: rgba(243, 243, 243, 0.78);
@@ -196,6 +203,22 @@
   .section-header h2 {
     color: var(--ean-text-primary);
     margin-bottom: 20px;
+    position: relative;
+  }
+
+  .section-header h2::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 3px;
+    margin-top: 18px;
+    background: linear-gradient(90deg, var(--ean-primary) 0%, var(--ean-green-accent) 100%);
+    border-radius: 2px;
+  }
+
+  section.dark .section-header h2::after {
+    background: linear-gradient(90deg, var(--ean-green-accent) 0%, var(--ean-primary) 100%);
+    box-shadow: 0 0 16px rgba(112, 224, 0, 0.45);
   }
 
   section.dark .section-header h2 { color: var(--ean-white-accent); }
@@ -219,9 +242,25 @@
 
   .mv-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 20px 40px -24px rgba(49, 51, 63, 0.16);
+    box-shadow: 0 20px 40px -24px rgba(49, 51, 63, 0.16), 0 0 0 1px rgba(112, 224, 0, 0.25);
     border-color: var(--ean-primary);
   }
+
+  .mv-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at top right, rgba(112, 224, 0, 0.18), transparent 70%);
+    border-top-right-radius: 20px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .mv-card:hover::before { opacity: 1; }
 
   .mv-card .label {
     display: flex;
@@ -265,6 +304,10 @@
     overflow: hidden;
   }
 
+  .value-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
   .value-card::before {
     content: "";
     position: absolute;
@@ -272,7 +315,13 @@
     left: 0;
     width: 4px;
     height: 100%;
-    background: var(--ean-primary);
+    background: linear-gradient(180deg, var(--ean-green-accent) 0%, var(--ean-primary) 100%);
+  }
+
+  .value-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--ean-primary);
+    box-shadow: 0 24px 48px -28px rgba(0, 128, 0, 0.28);
   }
 
   .value-card .num {
@@ -519,10 +568,52 @@
 
   /* CLOSING BANNER */
   .closing {
-    background: var(--ean-primary);
+    background:
+      radial-gradient(ellipse at 80% 20%, rgba(112, 224, 0, 0.35), transparent 55%),
+      radial-gradient(ellipse at 10% 90%, rgba(0, 128, 0, 0.55), transparent 60%),
+      linear-gradient(135deg, var(--ean-primary-dark) 0%, var(--ean-primary) 60%, #009b00 100%);
     color: var(--ean-white);
-    padding: 96px 0;
+    padding: 112px 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .closing::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--ean-green-accent) 50%, transparent 100%);
+  }
+
+  .closing .pulse {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    margin-bottom: 28px;
+    background: rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(112, 224, 0, 0.45);
+    border-radius: 999px;
+    color: var(--ean-green-accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .closing .pulse-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--ean-green-accent);
+    box-shadow: 0 0 0 4px rgba(112, 224, 0, 0.25);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(112, 224, 0, 0.25); }
+    50% { box-shadow: 0 0 0 8px rgba(112, 224, 0, 0.05); }
   }
 
   .closing h2 {
@@ -569,7 +660,13 @@
 <!-- HERO -->
 <header class="hero">
   <div class="container">
-    <h1 class="ean-heading-h1">About EAN &amp; Brand Voice</h1>
+    <span class="eyebrow ean-heading-uppercase ean-heading-uppercase-large" style="color: var(--ean-green-accent);">Brand Guidelines</span>
+    <h1 class="ean-heading-h1">About EAN &amp; <span class="accent">Brand Voice</span></h1>
+    <p class="lede ean-body-large">The standards, voice, and creative principles that shape every word EAN publishes — built so trust scales as fast as the network does.</p>
+    <div class="tagline ean-body-small-strong">
+      <span class="tagline-dot"></span>
+      <span>Trusted Philanthropy. Fully Linked.</span>
+    </div>
   </div>
 </header>
 
@@ -808,6 +905,7 @@
 <!-- CLOSING -->
 <section class="closing">
   <div class="container">
+    <span class="pulse"><span class="pulse-dot"></span>The EAN Promise</span>
     <h2 class="ean-heading-h2">Trusted Philanthropy. Fully Linked.</h2>
     <p class="ean-body-large">One verified network. Four connected roles. Every dollar traceable from Donor to Recipient.</p>
   </div>
