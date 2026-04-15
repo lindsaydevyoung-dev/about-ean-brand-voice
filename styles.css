@@ -189,6 +189,11 @@
     margin-bottom: 56px;
   }
 
+  @media (min-width: 768px) {
+    .section-header:has(.nowrap-desktop) { max-width: none; }
+    .nowrap-desktop { white-space: nowrap; }
+  }
+
   .section-header .ean-heading-uppercase {
     display: inline-block;
     margin-bottom: 16px;
@@ -302,7 +307,7 @@
   /* AUDIENCE INTENT */
   .intent-wrap {
     background: linear-gradient(135deg, var(--ean-dark-accent) 0%, var(--ean-dark-bg) 100%);
-    border-radius: 24px;
+    border-radius: 40px;
     padding: 72px 64px;
     color: var(--ean-white-accent);
     position: relative;
@@ -314,17 +319,16 @@
     position: absolute;
     right: -100px;
     top: -100px;
-    width: 400px;
+    width: 720px;
     height: 400px;
     background: radial-gradient(circle, rgba(0, 128, 0, 0.22), transparent 70%);
   }
 
   .intent-wrap .intent-body {
     position: relative;
-    max-width: 64ch;
   }
 
-  .intent-wrap h3 { color: var(--ean-white-accent); margin-bottom: 24px; }
+  .intent-wrap h4 { color: var(--ean-white-accent); padding-bottom: 24px; }
   .intent-wrap p { color: rgba(243, 243, 243, 0.82); }
 
   /* TWO COLUMN LISTS */
