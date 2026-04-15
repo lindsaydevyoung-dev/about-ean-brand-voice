@@ -136,8 +136,13 @@
   }
 
   .hero .lede {
-    max-width: 520px;
+    max-width: 720px;
     color: rgba(243, 243, 243, 0.78);
+  }
+
+  @media (min-width: 768px) {
+    .hero .lede { max-width: none; }
+    .hero .lede .lede-phrase { white-space: nowrap; }
   }
 
   .hero .tagline {
