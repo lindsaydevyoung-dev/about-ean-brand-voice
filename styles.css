@@ -113,6 +113,7 @@
     background: var(--ean-dark-bg);
     color: var(--ean-white-accent);
     padding: 140px 0 120px;
+    min-height: 60vh;
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid var(--ean-border-light);
@@ -182,13 +183,15 @@
     margin-bottom: 16px;
   }
 
-  .section-header h2 {
+  .section-header h2,
+  .section-header h3 {
     color: var(--ean-text-primary);
     margin-bottom: 20px;
     position: relative;
   }
 
-  .section-header h2::after {
+  .section-header h2::after,
+  .section-header h3::after {
     content: "";
     display: block;
     width: 56px;
@@ -198,7 +201,8 @@
     border-radius: 2px;
   }
 
-  section.dark .section-header h2 { color: var(--ean-white-accent); }
+  section.dark .section-header h2,
+  section.dark .section-header h3 { color: var(--ean-white-accent); }
   section.dark .section-header p { color: rgba(243, 243, 243, 0.72); }
 
   /* VISION FLOAT */
@@ -210,7 +214,8 @@
   }
 
   .vision-float .section-header { margin-bottom: 32px; }
-  .vision-float .section-header h2 { color: var(--ean-white-accent) !important; }
+  .vision-float .section-header h2,
+  .vision-float .section-header h3 { color: var(--ean-white-accent) !important; }
   .vision-float .mv-card {
     background: transparent;
     border: none;
