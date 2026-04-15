@@ -54,8 +54,8 @@
   .ean-heading-uppercase { font-size: 12px !important; font-weight: 700 !important; letter-spacing: 0.12em !important; line-height: 1.2em !important; text-transform: uppercase !important; color: var(--ean-primary) !important; font-style: normal !important; }
   .ean-heading-uppercase.ean-heading-uppercase-large { font-size: 14px !important; letter-spacing: 0.08em !important; }
 
-  .ean-body-xlarge-strong { font-size: 20px !important; font-weight: 600 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; color: var(--ean-dark-accent) !important;}
-  .ean-body-xlarge { font-size: 20px !important; font-weight: 400 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
+  .ean-body-xlarge-strong { font-size: 22px !important; font-weight: 600 !important; letter-spacing: 0em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; color: var(--ean-dark-accent) !important;}
+  .ean-body-xlarge { font-size: 20px !important; font-weight: 400 !important; letter-spacing: 0em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
   .ean-body-large-strong { font-size: 18px !important; font-weight: 600 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
   .ean-body-large { font-size: 18px !important; font-weight: 400 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: normal !important; text-wrap: balance !important; }
   .ean-body-large-italic { font-size: 18px !important; font-weight: 400 !important; letter-spacing: .01em !important; line-height: 1.7em !important; text-transform: none !important; font-style: italic !important; text-wrap: balance !important; }
@@ -299,7 +299,7 @@
   }
 
   .value-card .ean-body-xlarge-strong {
-    padding-bottom: 16px;
+    padding-bottom: 8px;
   }
 
   .value-card p { color: var(--ean-text-dark-body); }
